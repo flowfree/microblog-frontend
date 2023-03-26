@@ -9,6 +9,7 @@ import { refreshToken } from './features/auth/authSlice'
 import SignIn from "./features/auth/SignIn"
 import SignUp from "./features/auth/SignUp"
 import Reverse from './features/reverse/Reverse'
+import Feed from './features/feed/Feed'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -27,6 +28,7 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/reverse" element={<Reverse />} />
+        <Route path="/feed" element={<Feed />} />
       </Routes>
     </div>
   )
