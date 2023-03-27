@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { 
   Routes, 
   Route,
   Navigate
 } from 'react-router-dom'
 import { useAppDispatch } from './app/hooks'
-import { refreshToken } from './features/auth/authSlice'
-import SignIn from "./features/auth/SignIn"
-import SignUp from "./features/auth/SignUp"
+import { refreshToken } from './features/account/authSlice'
+import SignIn from "./features/account/SignIn"
+import SignUp from "./features/account/SignUp"
 import Reverse from './features/reverse/Reverse'
 import Feed from './features/feed/Feed'
 

@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios'
 import axiosRetry from 'axios-retry'
 import { store } from '../app/store'
-import { refreshToken } from '../features/auth/authSlice'
+import { refreshToken } from '../features/account/authSlice'
 
 const baseURL = process.env.REACT_APP_API_BASE_URL
 

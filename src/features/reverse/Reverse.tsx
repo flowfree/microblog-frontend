@@ -3,7 +3,7 @@ import axiosRetry from "axios-retry"
 import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
-import { selectAuth, refreshToken, clearToken } from '../auth/authSlice'
+import { selectAuth, refreshToken, clearToken } from '../account/authSlice'
 import { store } from "../../app/store"
 import BaseService from "../../services/BaseService"
 
