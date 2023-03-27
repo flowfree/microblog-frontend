@@ -22,6 +22,7 @@ export default function Reverse() {
   const navigate = useNavigate()
 
   useEffect(() => {
+    console.log(user)
     if (!user.username) {
       navigate('/')
     }

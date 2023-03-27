@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { XCircleIcon } from '@heroicons/react/20/solid'
 import { useNavigate } from 'react-router-dom'
@@ -18,7 +18,7 @@ export default function SignIn() {
     if (user.username) {
       setUsername('')
       setPassword('')
-      navigate('/reverse')
+      navigate('/edit_profile')
     }
   }, [user])
 

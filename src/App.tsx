@@ -10,6 +10,7 @@ import SignIn from "./features/account/SignIn"
 import SignUp from "./features/account/SignUp"
 import Reverse from './features/reverse/Reverse'
 import Feed from './features/feed/Feed'
+import EditProfile from './features/account/EditProfile'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -29,6 +30,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/reverse" element={<Reverse />} />
         <Route path="/feed" element={<Feed />} />
+        <Route path="/edit_profile" element={<EditProfile />} />
       </Routes>
     </div>
   )

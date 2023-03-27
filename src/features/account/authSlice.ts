@@ -37,7 +37,8 @@ export const authSlice = createSlice({
   reducers: {
     setToken: (state, action) => {
       const { access, refresh } = action.payload
-      state.user = jwt_decode<JWTClaim>(access)
+      const { userId, username } = jwt_decode<JWTClaim>(access)
+      state.user = { userId, username }
       state.accessToken = access
       state.refreshToken = refresh
       if (refresh) {
