@@ -6,6 +6,12 @@ interface UserProfile {
   bio: string
 }
 
+interface NewPassword {
+  oldPassword: string
+  password: string
+  password2: string
+}
+
 export default class UserService extends BaseService {
   getUserProfile() {
     return this.client.get('/account/profile')
@@ -13,5 +19,9 @@ export default class UserService extends BaseService {
 
   updateUserProfile(profile: UserProfile) {
     return this.client.post(`/account/profile`, profile)
+  }
+
+  updatePassword(form: NewPassword) {
+    return this.client.post('/account/change_password', form)
   }
 }

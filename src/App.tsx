@@ -11,6 +11,7 @@ import SignUp from "./features/account/SignUp"
 import Reverse from './features/reverse/Reverse'
 import Feed from './features/feed/Feed'
 import EditProfile from './features/account/EditProfile'
+import ChangePassword from './features/account/ChangePassword'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -22,6 +23,12 @@ function App() {
     }))
   }, [])
 
+  if (isLoading) {
+    return (
+      <div className="p-2 italic">Loading...</div>
+    )
+  }
+
   return (
     <div>
       <Routes>
@@ -31,6 +38,7 @@ function App() {
         <Route path="/reverse" element={<Reverse />} />
         <Route path="/feed" element={<Feed />} />
         <Route path="/edit_profile" element={<EditProfile />} />
+        <Route path="/change_password" element={<ChangePassword />} />
       </Routes>
     </div>
   )
